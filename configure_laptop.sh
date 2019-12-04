@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 sudo apt-get -qq update
 echo "initial update...done"
+sudo apt-get -qq install net-tools
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
 sudo apt-get -qq update -y
@@ -15,8 +16,8 @@ sudo apt-get -qq install ros-melodic-catkin python-catkin-tools -y
 sudo apt-get -qq install python-rosinstall python-rosinstall-generator python-wstool build-essential -y
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/
-catkin_make -quiet
-echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+catkin_make
+echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrctf
 echo "Check ROS_PACKAGE_PATH below (should be /home/aa274/catkin_ws/src:/opt/ros/melodic/share)"
 echo $ROS_PACKAGE_PATH
 echo "Installing Atom..."
@@ -51,5 +52,6 @@ git clone --quiet https://github.com/ROBOTIS-GIT/turtlebot3.git
 cd ~/catkin_ws && catkin_make
 cd ~/catkin_ws/src/asl_turtlebot
 sudo rm rostb3.sh
-sudo rm rostb3_melodic.sh rostb3.sh
+cd ~/melodic-configure
+sudo mv rostb3_melodic.sh ~/catkin_ws/src/asl_turtlebot/rostb3.sh
 echo "All done. Don't forget to update rostb3."
