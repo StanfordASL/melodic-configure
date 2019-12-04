@@ -39,7 +39,7 @@ sudo apt-get -qq install ros-melodic-slam-gmapping -y
 sudo apt-get -qq install ros-melodic-gmapping -y
 cd ~/catkin_ws/src/
 git clone --quiet https://github.com/StanfordASL/asl_turtlebot.git
-echo "alias rostb3='source ~/catkin_ws/src/asl_turtlebot/rostb3_melodic.sh'" >> ~/.bashrc
+echo "alias rostb3='source ~/catkin_ws/src/asl_turtlebot/rostb3.sh'" >> ~/.bashrc
 echo "alias roslocal='source ~/catkin_ws/src/asl_turtlebot/roslocal.sh'" >> ~/.bashrc
 echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc
 source ~/.bashrc
