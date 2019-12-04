@@ -11,13 +11,14 @@ echo "Done."
 sudo rosdep init
 rosdep update
 echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
-source ~/.bashrc
+source /opt/ros/melodic/setup.bash
 sudo apt-get -qq install ros-melodic-catkin python-catkin-tools -y
 sudo apt-get -qq install python-rosinstall python-rosinstall-generator python-wstool build-essential -y
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/
 catkin_make
-echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrctf
+echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+source ~/.bashrc
 echo "Check ROS_PACKAGE_PATH below (should be /home/aa274/catkin_ws/src:/opt/ros/melodic/share)"
 echo $ROS_PACKAGE_PATH
 echo "Installing Atom..."
@@ -43,7 +44,7 @@ git clone --quiet https://github.com/StanfordASL/asl_turtlebot.git
 echo "alias rostb3='source ~/catkin_ws/src/asl_turtlebot/rostb3.sh'" >> ~/.bashrc
 echo "alias roslocal='source ~/catkin_ws/src/asl_turtlebot/roslocal.sh'" >> ~/.bashrc
 echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc
-source ~/.bashrc
+source ~/catkin_ws/src/asl_turtlebot/rostb3.sh
 rostb3
 cd ~/catkin_ws/src/
 git clone --quiet https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
