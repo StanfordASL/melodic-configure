@@ -36,7 +36,6 @@ wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
 sudo apt-get -qq install gazebo9 -y
 echo "Done."
 echo "git cloning repos"
-rosrun rqt_reconfigure rqt_reconfigure
 sudo apt-get -qq install ros-melodic-slam-gmapping -y
 sudo apt-get -qq install ros-melodic-gmapping -y
 cd ~/catkin_ws/src/
@@ -45,7 +44,6 @@ echo "alias rostb3='source ~/catkin_ws/src/asl_turtlebot/rostb3.sh'" >> ~/.bashr
 echo "alias roslocal='source ~/catkin_ws/src/asl_turtlebot/roslocal.sh'" >> ~/.bashrc
 echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc
 source ~/catkin_ws/src/asl_turtlebot/rostb3.sh
-rostb3
 cd ~/catkin_ws/src/
 git clone --quiet https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
 cd ~/catkin_ws/src/
