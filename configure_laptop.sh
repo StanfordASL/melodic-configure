@@ -49,4 +49,7 @@ git clone --quiet https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
 cd ~/catkin_ws/src/
 git clone --quiet https://github.com/ROBOTIS-GIT/turtlebot3.git
 cd ~/catkin_ws && catkin_make
-echo "All done. Don't forget to update rostb3_melodic."
+cd ~/catkin_ws/src/asl_turtlebot
+sudo rm rostb3.sh
+sudo rm rostb3_melodic.sh rostb3.sh
+echo "All done. Don't forget to update rostb3."
