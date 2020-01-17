@@ -48,6 +48,8 @@ cd ~/catkin_ws/src/
 git clone --quiet https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
 cd ~/catkin_ws/src/
 git clone --quiet https://github.com/ROBOTIS-GIT/turtlebot3.git
+cd ~/catkin_ws/src/
+git clone --quiet https://github.com/turtlebot/turtlebot_simulator.git
 cd ~/catkin_ws && catkin_make
 cd ~/catkin_ws/src/asl_turtlebot
 sudo rm rostb3.sh
